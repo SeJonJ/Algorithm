@@ -1,9 +1,8 @@
 package DFS;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Maze {
+public class Maze_dfs {
     // n x n 짜리 미로가 있다. 이때 1은 벽이고, 0 은 통로다.
     // 미로에서는 상하좌우로만 움직인다. 출발지점은 1,1 이고 도작점은 7,7 이다.
     // 이때 격자판이 주어질때 도착점까지 가는 경우의 수는?
@@ -20,6 +19,8 @@ public class Maze {
     static int[] dy = {0, 1, 0, -1};
 
 
+    // 미로는 1,1 부터 시작함으로 8,8 짜리 배열이 생성되어야 함
+    // x 좌표가 0 인 애들과 y 좌표가 0 인 배열은 사용되지 않음
     static int[][] maze = new int[8][8];
     static int answer = 0;
 
