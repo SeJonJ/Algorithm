@@ -1,25 +1,30 @@
 package baekJoon;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class Quiz_2606_XXXX {
+public class Quiz_2606_Virus {
 
     static int vex, edge;
-    static ArrayList<ArrayList<Integer>> graph = new ArrayList<ArrayList<Integer>>();
 
     static int count = 0;
     static boolean[] ch;
+    static int[][] graph;
 
     public static void dfs(int n) {
-        //System.out.println(n + " : " + vex);
 
-        for (Integer g : graph.get(n)) {
-            if (!ch[g]) {
-                ch[g] = true;
+//            System.out.println(n);
+        ch[n] = true;
+
+
+        for (int i = 1; i <= vex; i++) {
+//            System.out.println(i + " : " + n);
+
+            if (graph[n][i] == 1 && !ch[i]) {
+                System.out.println(i + " : " + n);
+
                 count++;
-                dfs(g);
+                dfs(i);
             }
         }
 
@@ -33,21 +38,22 @@ public class Quiz_2606_XXXX {
         edge = scanner.nextInt();
 
         ch = new boolean[vex + 1];
+        graph = new int[vex + 1][vex + 1];
+//        Arrays.fill(ch, false);
 
-        for (int i = 0; i < vex; i++) {
-            graph.add(new ArrayList<Integer>());
-        }
 
         for (int i = 0; i < edge; i++) {
             int num1 = scanner.nextInt();
             int num2 = scanner.nextInt();
 
-            graph.get(num1).add(num2);
+
+            graph[num1][num2] = graph[num2][num1] = 1;
+
         }
 
         //ch[1] = true;
         dfs(1);
-        System.out.println("count : "+count);
-        System.out.println(Arrays.toString(graph.toArray()));
+        System.out.println(count);
+
     }
 }
