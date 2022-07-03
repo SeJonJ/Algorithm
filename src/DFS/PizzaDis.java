@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 
-// 이 문제의 포인트는 도시의 피자 배달 거리 = (하나의 피자집에서 모든 가정집까지의 피자 배달 거리)
-// 1. 즉 4가지 조합으로 구성되는 피자집 중 하나씩 뽑아서 각 피자집으로부터 여러 가정집까지의 피자 배달 거리를 계산 후
+// 이 문제의 포인트는 도시의 피자 배달 거리 = (하나의 개인집에서 모든 피자집까지의 피자 배달 거리)
+// 1. 즉 하나의 가정집을 기준으로 4가지 조합으로 뽑아져나온 피자집 별 피자배달거리를 계산한다
 // 2. 해당 피자집을 모두 더한 값을 도시 피자 배달 거리라는 변수에 저장해 둔다.
 // 이후 모든 피자집의 조합을 계싼해서 1~2 에서 계산한 각 조합별 도시의 피자배달 거리 중 최소값을 찾는것
 // 어렵다...
@@ -32,13 +32,13 @@ public class PizzaDis {
                     System.out.println("dis ; " + dis);
 
 //                    System.out.println(sWay.x + " : " + sWay.y);
+                    // dis 는
                     dis = Math.min(dis, Math.abs(hWay.x - sWay.x) + Math.abs(hWay.y - sWay.y));
 
 //                    System.out.println("sum : " + sum);
 //                    System.out.println("result : " + result);
                 }
-                sum+=dis;
-
+                sum+=dis; // 하나의 집과 조합에 들어있는 가게별 거리를 모두 합해서 sum 에 저장장
             }
 //            System.out.println("sum : " + sum);
             result = Math.min(sum, result);
