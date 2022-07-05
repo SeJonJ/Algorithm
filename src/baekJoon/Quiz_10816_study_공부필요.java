@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.LinkedHashMap;
 import java.util.StringTokenizer;
 
-public class Quiz_10816_study_추후확인 {
+public class Quiz_10816_study_공부필요 {
 
     static final LinkedHashMap<Integer, Integer> map = new LinkedHashMap<>();
 

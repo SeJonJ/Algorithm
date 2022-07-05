@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 // 구간합 구하기
 // https://www.acmicpc.net/problem/11659
-public class Quiz_11659_study_더공부 {
+public class Quiz_11659_study {
 
     static int n, m; // 수의 갯수 n 합을 구해야하는 횟수 m
     static ArrayList<Integer> list = new ArrayList<Integer>(); // 입력받는 숫자 배열

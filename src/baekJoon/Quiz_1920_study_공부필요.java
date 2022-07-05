@@ -3,7 +3,7 @@ package baekJoon;
 import java.io.*;
 import java.util.*;
 
-public class Quiz_1920_study_XXXXXXXX {
+public class Quiz_1920_study_공부필요 {
 
     public static void main(String[] args) throws IOException {
         HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
