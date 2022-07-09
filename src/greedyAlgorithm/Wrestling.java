@@ -1,6 +1,6 @@
 package greedyAlgorithm;
 
-public class Wrestling {
+public class Wrestling  {
     // 그리디 알고리즘 시작!
     // 그리디 알고리즘은 쉽게 말해서 그때그때마다 최선의 선택을 따라서 정답을 찾아가는 것!!
     //현수는 씨름 감독입니다. 현수는 씨름 선수를 선발공고를 냈고, N명의 지원자가 지원을 했습니다.

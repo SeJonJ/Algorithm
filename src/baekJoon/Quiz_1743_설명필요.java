@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/1743
 // 음식물 피하기
-public class Quiz_1743 {
+public class Quiz_1743_설명필요 {
     static int[] dx = {-1, 1, 0, 0};
     static int[] dy = {0, 0, 1, -1};
     static int[][] load;
