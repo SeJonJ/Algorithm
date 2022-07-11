@@ -73,18 +73,4 @@ class Point implements Comparable<Point> {
         }
     }
 
-    /*
-        4
-        0 99
-        1 97
-        1 92
-        2 85
-
-
-        4
-        2 85
-        1 92
-        1 97
-        0 99
-    */
 }

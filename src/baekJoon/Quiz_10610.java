@@ -3,6 +3,8 @@ package baekJoon;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
 
 public class Quiz_10610 {
     static int[] list = {300, 60, 10};
