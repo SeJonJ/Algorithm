@@ -1,26 +1,25 @@
-package baekJoon;
+package algorithm;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class TEST {
+public class Test_for {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        int m = scan.nextInt(); // 가로
-        int n = scan.nextInt(); // 세로
-        int[][] test = new int[n][m];
+        int n = scan.nextInt(); //
+        int m = scan.nextInt(); //
+        int[][] test = new int[n][m]; // y, x
 
 
 //        for (int[] i : test) {
 //            for (int j : i) {
-//                System.out.print(j + " ");
+//                System.out.print(j + " ");3
 //            }
 //            System.out.println("");
 //        }
         int cnt = 0;
         for(int i = 0; i < n; i++){ // 가로 row
-//            System.out.println(n + " ");
+//            System.out.print(n + " ");
             for (int j = 0; j < m; j++) { // 세로 col
 //                System.out.print(m+" ");
 
