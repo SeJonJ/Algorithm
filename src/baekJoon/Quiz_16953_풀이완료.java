@@ -3,7 +3,7 @@ package baekJoon;
 import java.io.*;
 import java.util.StringTokenizer;
 
-public class Quiz_16953 {
+public class Quiz_16953_풀이완료 {
     static long a, b; // int 타입으로 설정하면 틀림!! => 문제가 int 가 아닌 long 으로 받기 때문인듯?
     static int result = Integer.MAX_VALUE; // 결과값 -> 처음은 최대값
 
