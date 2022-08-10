@@ -8,11 +8,9 @@ import java.util.*;
 
 public class Quiz_1697_풀이완료 {
 
-    static int n, k;
+    static int n, k; // 입력받은 위치
 
-    static int minTime = Integer.MAX_VALUE;
-    static int cnt = 0;
-    static int[] ch = new int[100001];
+    static int[] ch = new int[100001]; // 배열의 크기는 최대입력받을 수 있는 크기 +1
     static Queue<Integer> q = new LinkedList<>();
 
     public static void main(String[] args) throws IOException {
@@ -23,9 +21,9 @@ public class Quiz_1697_풀이완료 {
         n = Integer.parseInt(st.nextToken());
         k = Integer.parseInt(st.nextToken());
 
-        Arrays.fill(ch, 0);
+        Arrays.fill(ch, 0); // 배열을 0 으로 초기화화
 
-        // 입력받은 n 이 k 보다 크거나 같다면, n-k !!
+       // 입력받은 n 이 k 보다 크거나 같다면, n-k !!
         // n 이 k 보다 클때 n 이 k 에 도달하기 위해 할 수 있는 연산은 -1 하나뿐이다.
         // 따라서 결국 n 에서 k 까지 -1 을 몇번이나 하는가? 가 답이된다.
         if (n >= k) {
@@ -39,9 +37,6 @@ public class Quiz_1697_풀이완료 {
 
             findBrother();
         }
-
-
-
     }
 
     static void findBrother() {
@@ -55,7 +50,6 @@ public class Quiz_1697_풀이완료 {
                 System.out.println(ch[sum]); // ch[sum] 을 출력 ==> ch[sum] 안에는 시간값이 들어가 있음
                 return;
             }
-
 
             // 아래의 연산은 모두 동일한 내용
             // +1, -1, *2 했을때 각각 0보다 크거나 같고, 100000보다 작거나 같아야함
