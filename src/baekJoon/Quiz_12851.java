@@ -5,8 +5,6 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-// 참고
-// https://velog.io/@undefcat/%EB%B0%B1%EC%A4%80-12851-%EC%88%A8%EB%B0%94%EA%BC%AD%EC%A7%88-2
 
 public class Quiz_12851 {
     static int n, k;
@@ -81,10 +79,6 @@ public class Quiz_12851 {
                     arr[next] = arr[dis] + 1;
                 }
             }
-
-
-
-
         }
     }
 }
