@@ -15,6 +15,7 @@ public class Quiz_7568 {
 
         int n = Integer.parseInt(br.readLine());
         rank = new int[n];
+        // 초기값 1 => 1등이 시작임으로 1로 초기화
         Arrays.fill(rank, 1);
 
         for(int i=0; i<n; i++){
@@ -56,11 +57,15 @@ class Dungchi implements Comparable<Dungchi>{
 
     @Override
     public int compareTo(Dungchi o) {
+        // 만약 몸무게와 키가 모두 크다면 1
         if (this.weight > o.weight && this.height > o.height) {
             return 1;
+
+        // 만약 몸무게와 키 모두 작다면 -1
         } else if (this.weight < o.weight && this.height < o.height) {
             return -1;
-        }else{
+
+        }else{ // 이 외의 경우 -> 즉 둘중 하나만 크고, 하나는 작을때
             return 0;
         }
 
