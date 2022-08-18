@@ -5,7 +5,6 @@ import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class Quiz_10825 {
-    static int n;
     static PriorityQueue<Score> q = new PriorityQueue<Score>();
 
     public static void main(String[] args) throws IOException {
