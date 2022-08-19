@@ -87,22 +87,37 @@ public class Quiz_3055_풀이필요_최우선 {
                     continue;
                 }
 
+                // 물에 대해서 queue 가 끝나면 이제 고슴도치가 움직이기 시작한다.
                 if (now.name.equals("S")) {
 
-
+                    // 고슴도치가 다음 방문하는 곳이 5 라면
+                    // map 에서 5는 비버굴을 의미함으로 도착한 것으로 취급한다
                     if (map[nx][ny] == 5) {
 
+                        // 도착지까지의 움직인 시간을 min 에 저장한다.
+                        // 이때 현재 min 과 비교해서 최소값을 저장한다.
                         min = Math.min(min, now.cnt + 1);
 
                     }
 
+                    // 만약 다음 방문하는 곳이 0 인 경우 해당 좌표에 방문한다.
+                    // 만약 다음 방문하는 곳이 1인 경우 물 배열에서 해당 좌표의 값을 조사한다.
+                    // 물 배열은 해당 좌표까지의 시간을 저장함으로
+                    // 고슴도치가 도착하는 시간 즉 now.cnt+1 보다 물이 해당 좌표에 도착하는 시간이 작은 경우에만
+                    // 해당 좌표를 방문한다.
+                    // 이는 조건 3을 만족하기 위함으로 동일한 좌표에 도착하더라도 물이 3초만에 도착하고, 고슴도치도 3초만에 도착한다면
+                    // 고슴도치는 해당 좌표에 갈 수 없기 때문에 고슴도치는 항상 물보다 먼저 해당 좌표에 도착해야한다.
                     if (map[nx][ny] == 0 || (map[nx][ny] == 1 && water[nx][ny] > now.cnt + 1)) {
                         map[nx][ny] = 4;
 
+                        // animal 배열에는 고슴도치가 해당 좌표에 방문한 시간을 저장한다.
                         animal[nx][ny] = now.cnt + 1;
 
+                        // 그리고 queue 에 넣는다.
                         q.offer(new Move("S", nx, ny, now.cnt + 1));
 
+                        // map 에서 고슴도치가 이미 방문한 곳도 다시 확인한다.
+                        // 이는 물 배열과 마찬가지로 해당 좌표에 고슴도치가 도착하는 최솟값을 확인하기 위해서이다.
                     } else if (map[nx][ny] == 4) {
                         if (now.cnt + 1 < animal[nx][ny]) {
                             animal[nx][ny] = now.cnt + 1;
@@ -110,16 +125,25 @@ public class Quiz_3055_풀이필요_최우선 {
                         }
                     }
 
-                    // name 이
+                    // name 이 * 인 애들 즉 물은 아래 if 문을 실행한다
                 } else if (now.name.equals("*")) {
+                    // 만약 map 에서 탐색했을 때 다음 방문할 곳이 0(빈칸)이라면
                     if (map[nx][ny] == 0) {
+                        // 방문 후 1로 변경
                         map[nx][ny] = 1;
 
+                        // 물 배열에는 현재 cnt 값 +1 을 한다.
                         water[nx][ny] = now.cnt + 1;
 
+                        // 그리고 queue 에 넣는다.
                         q.offer(new Move("*", nx, ny, now.cnt + 1));
 
+                        // 만약 다음 방문할 곳이 이미 물이 이미 방문한 곳이라면
                     } else if (map[nx][ny] == 1) {
+                        // 물 배열에서 해당 좌표의 값을 확인한다.
+                        // 이때 확인한 값이 현재 now.cnt+1 보다 큰 수라면
+                        // 물 배열의 값을 현재 now.cnt+1 로 바꾼다.
+                        // 이는 물 배열에서 해당 좌표에 도착했을 때 최소값을 저장하기 위해서이다.
                         if (water[nx][ny] > now.cnt + 1) {
                             water[nx][ny] = now.cnt + 1;
                             q.offer(new Move("*", nx, ny, now.cnt + 1));
@@ -138,7 +162,7 @@ class Move implements Comparable<Move> {
     String name;
     int x;
     int y;
-    int cnt;
+    int cnt; // 움직힌 횟수(시간)
 
     Move(String name, int x, int y, int cnt) {
         this.name = name;
