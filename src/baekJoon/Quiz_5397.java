@@ -57,6 +57,7 @@ public class Quiz_5397 {
                     break;
 
                 default:
+                    // 위에 모두다 아니면 iter 에 i 값을 추가한다.
                     iter.add(str.charAt(i));
                     break;
             }
