@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+// https://www.acmicpc.net/problem/2292
 public class Quiz_2292 {
 
     // 시작 지점은 1 , 이웃하는 방의 범위와 이에 따른 벌집의 갯수는 아래와 같다.
