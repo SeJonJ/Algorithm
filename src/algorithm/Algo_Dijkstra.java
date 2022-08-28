@@ -10,7 +10,7 @@ import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Scanner;
 
-// 다익스크라 알고리즘을 코드 짜기
+// 다익스트라 알고리즘을 코드 짜기
 // 0. 정점과 비용을 위한 Edge class 를 만들어둔다
 // 1. n번째 노드에서의 최소 cost 로 방문할 수 있는 도로를 찾기위해 PriorityQueue 를 사용한다.
 // 2. n번째 노드와 연결되는 노드를 표시하기 위한 ArrayList 를 만든다 => ArrayList.add(ArrayList<Edge>)
