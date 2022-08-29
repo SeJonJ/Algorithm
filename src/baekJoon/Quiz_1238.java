@@ -70,11 +70,11 @@ public class Quiz_1238 {
 
         }
 
-        // 1. 각 마을에서 X 마을까지의 최단 거리 계산 후 goX 에 저장 => 파티 가는 길
-        findTime(tree, goX, x);
+        // 1. X 마을에서 각 마을까지 최단 거리 계산 후 bakHome 에 저장 => 파티 돌아오는 길
+        findTime(tree, bakHome, x);
 
-        // 2. X 마을에서 각 마을까지 최단 거리 계산 후 bakHome 에 저장 => 파티 돌아오는 길
-        findTime(treeReverse, bakHome, x);
+        // 2. 각 마을에서 X 마을까지의 최단 거리 계산 후 goX 에 저장 => 파티 가는 길
+        findTime(treeReverse, goX, x);
 
 
         System.out.println(findMax());
