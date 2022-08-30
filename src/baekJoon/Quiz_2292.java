@@ -19,7 +19,6 @@ public class Quiz_2292 {
     // 즉 범위 최소값인 range 를 기준으로
     // range > n 이면 현재 cnt 를 return 하고
     // range <= n 이면 range > n 가 될 때까지 계산한 후 계산된 cnt 를 return 한다.
-
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
