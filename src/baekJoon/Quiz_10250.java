@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/10250
 public class Quiz_10250 {
     // 6층 : 12방 => X
     // 12층 : 6방 => O
