@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/2609
 // https://ko.wikipedia.org/wiki/%EC%9C%A0%ED%81%B4%EB%A6%AC%EB%93%9C_%ED%98%B8%EC%A0%9C%EB%B2%95
+// 유클리드 호제법 사용하기
 public class Quiz_2609 {
     static int n,m;
     static int gcd;
