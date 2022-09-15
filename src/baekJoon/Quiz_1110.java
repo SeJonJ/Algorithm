@@ -27,6 +27,8 @@ public class Quiz_1110 {
                 num[0] = 0;
                 num[1] = k;
             }else{
+                // String.valueOf(k).charAt(0) 를 사용하면 반환되는 값은 char 를 int 로 바꾼 아스키 코드 값이
+                // 나오기 때문에 이를 다시 숫자로 고치기 위해 -48 을 계산한다.
                 num[0] = String.valueOf(k).charAt(0)-48;
                 num[1] = String.valueOf(k).charAt(1)-48;
             }
