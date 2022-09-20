@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.*;
 
-public class Quiz_1516_풀이중 {
+public class Quiz_1516 {
     static int n;
     static ArrayList<ArrayList<Integer>> building;
     static int[] time;
