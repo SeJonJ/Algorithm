@@ -13,7 +13,6 @@ import java.util.StringTokenizer;
  둘째줄부터 각 줄에 한 개의 벽돌에 관한 정보인 벽돌의 밑면의 넓이, 벽돌의 높이, 무게가 차례대로 주어진다
 
   이때 가장 높이 쌓을 수 잇는 벽돌의 높이는?
-
 *
 * */
 public class Dp_2_2_LIS {
